@@ -50,6 +50,7 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: ffa8866025cfa4309a56084043793129, type: 3}
   - {fileID: 21300000, guid: e71644b1e458f43e9b566b793dec2f95, type: 3}
   - {fileID: 21300000, guid: 00bb5ec1ba9b547f78444b8029d384fd, type: 3}
   - {fileID: 21300000, guid: e13873a2e57cb4a9aba9a13f8ca1d793, type: 3}
@@ -58,6 +59,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a5e47053e223e423db03a50c400e2ba0, type: 3}
   - {fileID: 21300000, guid: aa708a83e95434127bac7c0f44c29681, type: 3}
   - {fileID: 21300000, guid: 2e0b65a3c8947405d822218af00fc9e9, type: 3}
+  - {fileID: 21300000, guid: b880cf85aa836429fbfa9c82abeebd4b, type: 3}
   - {fileID: 21300000, guid: 9ccf6fa5f4d5a4990b613a19c4695d18, type: 3}
   - {fileID: 21300000, guid: 1861bd56c66e748e886d5d65f18cafef, type: 3}
   - {fileID: 21300000, guid: 364c8596bad244f6d8030705760b6a08, type: 3}
@@ -91,6 +93,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 739430feeede64c5192b3e5cf4719fb8, type: 3}
   - {fileID: 21300000, guid: 9744a11f62ee0421c890ac9b1daa2a0b, type: 3}
   m_PackedSpriteNamesToIndex:
+  - carrotTV-ui-img-key-2
   - skyboard-ui-img-tutriol-2
   - skyboard-ui-img-element-3
   - skyboard-ui-img-tutriol-4
@@ -99,6 +102,7 @@ SpriteAtlas:
   - skyboard-ui-img-paticle-screenend-12
   - skyboard-ui-img-element-6
   - skyboard-ui-img-present-2
+  - carrotTV-img-keydown
   - skyboard-ui-img-paticle-screenend-14
   - skyboard-ui-img-tutriol-3
   - skyboard-ui-img-present-1

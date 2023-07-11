@@ -1,8 +1,13 @@
 using UnityEngine;
 
+
 public class Man : MonoBehaviour
 {
     public float speed = 5f;  // 球的速度
+
+    [SerializeField] private GameObject _xcollision;
+    [SerializeField] private GameObject _ycollision;
+
     private Vector2 direction;  // 球的方向
     private Rigidbody2D rb;
 
@@ -23,20 +28,20 @@ public class Man : MonoBehaviour
     void FixedUpdate()
     {
         // 碰到相机边界时反弹
-        if (transform.position.y >= Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0)).y - GetComponent<CapsuleCollider2D>().bounds.size.y / 2)
-        {
-            Debug.Log("switch Y");
-            direction.y *= -1;
-            rb.velocity = direction * speed;
-            
-        }
-        if (transform.position.x <= Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).x + GetComponent<CapsuleCollider2D>().bounds.size.x / 2
-            || transform.position.x >= Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0)).x - GetComponent<CapsuleCollider2D>().bounds.size.x / 2)
-        {
-            Debug.Log("switch X");
-            direction.x *= -1;
-            rb.velocity = direction * speed;
-        }
+        //if (transform.position.y >= Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0)).y - GetComponent<CapsuleCollider2D>().bounds.size.y / 2)
+        //{
+        //    Debug.Log("switch Y");
+        //    direction.y *= -1;
+        //    rb.velocity = direction * speed;
+
+        //}
+        //if (transform.position.x <= Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).x + GetComponent<CapsuleCollider2D>().bounds.size.x / 2
+        //    || transform.position.x >= Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0)).x - GetComponent<CapsuleCollider2D>().bounds.size.x / 2)
+        //{
+        //    Debug.Log("switch X");
+        //    direction.x *= -1;
+        //    rb.velocity = direction * speed;
+        //}
         if (transform.position.y <= Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).y + GetComponent<CapsuleCollider2D>().bounds.size.y / 2)
         {
             GameObject.FindWithTag("Game").GetComponent<gamecenter>().endGame();
@@ -55,6 +60,20 @@ public class Man : MonoBehaviour
 
             //sound
             jump.Play();
+        }
+
+        if (collision.gameObject == _xcollision)
+        {
+            direction.x *= -1;
+
+            rb.velocity = direction * speed;
+        }
+
+        if (collision.gameObject == _ycollision)
+        {
+            direction.y *= -1;
+
+            rb.velocity = direction * speed;
         }
     }
 }
