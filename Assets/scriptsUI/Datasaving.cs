@@ -42,14 +42,14 @@ public class Datasaving : MonoBehaviour
         LoadLeaderboard();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            PlayerPrefs.DeleteAll();
-            Debug.Log("PlayerPrefs data has been cleaned.");
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Tab))
+    //    {
+    //        PlayerPrefs.DeleteAll();
+    //        Debug.Log("PlayerPrefs data has been cleaned.");
+    //    }
+    //}
 
     private void LoadLeaderboard()
     {

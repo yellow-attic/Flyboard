@@ -16,13 +16,13 @@ public class Scorerecord : MonoBehaviour
         scoretext.text = _score.ToString();
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            GetTextFromInputField();
-        }
-    }
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Return))
+    //    {
+    //        GetTextFromInputField();
+    //    }
+    //}
 
     public void GetTextFromInputField()
     {
